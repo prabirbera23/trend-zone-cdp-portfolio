@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/trend-zone-hero.jpg" alt="Trend Zone ecommerce customer data platform portfolio banner" width="100%">
+
 # Twilio Segment CDP for Ecommerce and Retail
 
 ### An end-to-end customer data platform case study for Trend Zone
