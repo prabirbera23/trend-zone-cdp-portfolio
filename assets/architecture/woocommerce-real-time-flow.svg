@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
+  <title id="title">Trend Zone WooCommerce real-time data flow</title>
+  <desc id="desc">A validated real-time flow from the Trend Zone website through WooCommerce, GTM4WP, Google Tag Manager and Segment Analytics.js to the Twilio Segment Source Debugger.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffaf5"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#96588a"/><stop offset=".48" stop-color="#ff7b36"/><stop offset="1" stop-color="#22b56b"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#2d1b34" flood-opacity=".11"/></filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#8e7893"/></marker>
+    <style>
+      .f{font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.k{font-size:15px;font-weight:800;letter-spacing:2.2px;fill:#8c778f}.h{font-size:36px;font-weight:800;fill:#29172f}.s{font-size:18px;fill:#746279}.t{font-size:20px;font-weight:760;fill:#302035}.d{font-size:14px;fill:#79687e}.snum{font-size:12px;font-weight:820;letter-spacing:.8px;fill:#8b758f}.badge{font-size:13px;font-weight:820;letter-spacing:.7px;fill:#177f45}
+    </style>
+  </defs>
+  <rect width="1600" height="560" rx="32" fill="url(#bg)"/>
+  <g class="f">
+    <text x="70" y="62" class="k">IMPLEMENTED SOURCE · SPRINT 1</text>
+    <text x="70" y="110" class="h">Real-Time Ecommerce Flow</text>
+    <text x="70" y="143" class="s">A customer action becomes a governed Segment event and is validated end to end.</text>
+    <rect x="1265" y="62" width="265" height="42" rx="21" fill="#e8faef" stroke="#bce8cc"/>
+    <circle cx="1291" cy="83" r="8" fill="#22b56b"/><text x="1310" y="89" class="badge">IMPLEMENTED &amp; VALIDATED</text>
+
+    <path d="M188 302H1408" stroke="url(#flow)" stroke-width="14" stroke-linecap="round" opacity=".18"/>
+
+    <g filter="url(#shadow)">
+      <rect x="55" y="208" width="210" height="190" rx="24" fill="#fff" stroke="#eadfea"/>
+      <circle cx="160" cy="260" r="32" fill="#eff5ff"/><rect x="140" y="246" width="40" height="29" rx="4" fill="none" stroke="#3b82f6" stroke-width="4"/><path d="M140 255h40" stroke="#3b82f6" stroke-width="4"/>
+      <text x="160" y="322" text-anchor="middle" class="t">Trend Zone</text><text x="160" y="348" text-anchor="middle" class="d">Customer action</text><text x="160" y="379" text-anchor="middle" class="snum">01 · WEBSITE</text>
+
+      <rect x="310" y="208" width="210" height="190" rx="24" fill="#fff" stroke="#dcbfd8"/>
+      <circle cx="415" cy="260" r="32" fill="#96588a"/><text x="415" y="268" text-anchor="middle" font-size="22" font-weight="840" fill="#fff">WOO</text>
+      <text x="415" y="322" text-anchor="middle" class="t">WooCommerce</text><text x="415" y="348" text-anchor="middle" class="d">Ecommerce event</text><text x="415" y="379" text-anchor="middle" class="snum">02 · ACTION</text>
+
+      <rect x="565" y="208" width="210" height="190" rx="24" fill="#fff" stroke="#f3d2ba"/>
+      <circle cx="670" cy="260" r="32" fill="#ff7b36"/><text x="670" y="268" text-anchor="middle" font-size="23" font-weight="840" fill="#fff">{ }</text>
+      <text x="670" y="322" text-anchor="middle" class="t">GTM4WP</text><text x="670" y="348" text-anchor="middle" class="d">Ecommerce Data Layer</text><text x="670" y="379" text-anchor="middle" class="snum">03 · EXPOSE</text>
+
+      <rect x="820" y="208" width="210" height="190" rx="24" fill="#fff" stroke="#cddcf8"/>
+      <circle cx="925" cy="260" r="32" fill="#246fdb"/><path d="M925 239l21 21-21 21-21-21z" fill="none" stroke="#fff" stroke-width="5"/><path d="M925 248l12 12-12 12-12-12z" fill="#fff"/>
+      <text x="925" y="309" text-anchor="middle" class="t"><tspan x="925">Google Tag</tspan><tspan x="925" dy="24">Manager</tspan></text><text x="925" y="359" text-anchor="middle" class="d">Map and control</text><text x="925" y="382" text-anchor="middle" class="snum">04 · ROUTE</text>
+
+      <rect x="1075" y="208" width="210" height="190" rx="24" fill="#fff" stroke="#ccead9"/>
+      <circle cx="1180" cy="260" r="32" fill="#22b56b"/><path d="M1162 249h36M1162 260h36M1162 271h25" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+      <text x="1180" y="309" text-anchor="middle" class="t"><tspan x="1180">Segment</tspan><tspan x="1180" dy="24">Analytics.js</tspan></text><text x="1180" y="359" text-anchor="middle" class="d">Page · Track · Identify</text><text x="1180" y="382" text-anchor="middle" class="snum">05 · SEND</text>
+
+      <rect x="1330" y="208" width="215" height="190" rx="24" fill="#fff" stroke="#ccead9"/>
+      <circle cx="1438" cy="260" r="32" fill="#f0faf4"/><circle cx="1438" cy="260" r="17" fill="none" stroke="#22a865" stroke-width="5"/><path d="M1438 260l11-9M1438 260l8 10" stroke="#22a865" stroke-width="4" stroke-linecap="round"/>
+      <text x="1438" y="322" text-anchor="middle" class="t">Source Debugger</text><text x="1438" y="348" text-anchor="middle" class="d">Validate payload</text><text x="1438" y="379" text-anchor="middle" class="snum">06 · VERIFY</text>
+    </g>
+
+    <path d="M265 302H296" stroke="#8e7893" stroke-width="3" marker-end="url(#arrow)"/><path d="M520 302H551" stroke="#8e7893" stroke-width="3" marker-end="url(#arrow)"/><path d="M775 302H806" stroke="#8e7893" stroke-width="3" marker-end="url(#arrow)"/><path d="M1030 302H1061" stroke="#8e7893" stroke-width="3" marker-end="url(#arrow)"/><path d="M1285 302H1316" stroke="#8e7893" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="390" y="444" width="820" height="54" rx="27" fill="#fbf7fc" stroke="#eadfea"/>
+    <text x="800" y="477" text-anchor="middle" font-size="16" font-weight="680" fill="#5f4b65">view_item · add_to_cart · remove_from_cart · view_cart · begin_checkout · purchase · user_identified</text>
+  </g>
+</svg>

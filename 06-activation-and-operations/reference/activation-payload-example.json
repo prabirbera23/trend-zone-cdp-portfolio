@@ -1,0 +1,40 @@
+{
+  "contract_version": "sprint-6-day-3-v1",
+  "customer_id": "TZ-CUST-006",
+  "audience": {
+    "name": "Recent purchasers",
+    "version": "2026-09-21.v1",
+    "qualification_reason": "Completed order within configured lookback window",
+    "evaluated_at": "2026-09-21T10:00:00Z"
+  },
+  "identity": {
+    "quality": "deterministic",
+    "source_lineage_ref": [
+      "trendcart.customer.TC-CUST-006",
+      "salesforce.contact.003g700000eYmCrAAK",
+      "salesforce.case.00001026"
+    ]
+  },
+  "consent_snapshot": {
+    "marketing_email": "granted",
+    "service_communication": "granted"
+  },
+  "profile": {
+    "first_name": "Aditi",
+    "last_name": "Sharma",
+    "email": "aditi.sharma.tz006@example.com"
+  },
+  "destinations": {
+    "braze": {
+      "external_id": "TZ-CUST-006",
+      "audience_membership": "Recent purchasers",
+      "cdp_identity_quality": "deterministic",
+      "cdp_qualification_reason": "Completed order within configured lookback window"
+    },
+    "service_workflow": {
+      "trend_zone_customer_id": "TZ-CUST-006",
+      "case_number": "00001026",
+      "open_service_case": true
+    }
+  }
+}

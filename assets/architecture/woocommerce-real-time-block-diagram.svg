@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="330" viewBox="0 0 1600 330" role="img" aria-labelledby="title desc">
+  <title id="title">WooCommerce to Segment block diagram</title>
+  <desc id="desc">A simple linear block diagram from a website action through WooCommerce, the GTM4WP data layer, Google Tag Manager and Segment Analytics.js to the Segment Source Debugger.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#333333"/></marker>
+    <style>
+      .f{font-family:Inter,Arial,sans-serif}.main{font-size:20px;font-weight:700;fill:#171717}.sub{font-size:14px;fill:#5d5d5d}.end{font-size:16px;font-weight:650;fill:#292929}.step{font-size:12px;font-weight:700;letter-spacing:.7px;fill:#707070}
+    </style>
+  </defs>
+  <rect width="1600" height="330" fill="#ffffff"/>
+  <g class="f">
+    <!-- Input terminal -->
+    <circle cx="70" cy="165" r="11" fill="#ffffff" stroke="#222222" stroke-width="4"/>
+    <line x1="81" y1="165" x2="100" y2="165" stroke="#333333" stroke-width="4" marker-end="url(#arrow)"/>
+    <text x="70" y="210" text-anchor="middle" class="end">Website</text>
+    <text x="70" y="231" text-anchor="middle" class="sub">action</text>
+
+    <!-- Blocks -->
+    <rect x="115" y="90" width="245" height="150" fill="#f8f8f8" stroke="#333333" stroke-width="3"/>
+    <text x="238" y="137" text-anchor="middle" class="step">01 · ECOMMERCE</text>
+    <text x="238" y="174" text-anchor="middle" class="main">WooCommerce</text>
+    <text x="238" y="201" text-anchor="middle" class="sub">Customer interaction</text>
+
+    <line x1="360" y1="165" x2="405" y2="165" stroke="#333333" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="420" y="90" width="245" height="150" fill="#f8f8f8" stroke="#333333" stroke-width="3"/>
+    <text x="543" y="137" text-anchor="middle" class="step">02 · DATA LAYER</text>
+    <text x="543" y="174" text-anchor="middle" class="main">GTM4WP</text>
+    <text x="543" y="201" text-anchor="middle" class="sub">Ecommerce event payload</text>
+
+    <line x1="665" y1="165" x2="710" y2="165" stroke="#333333" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="725" y="90" width="245" height="150" fill="#f8f8f8" stroke="#333333" stroke-width="3"/>
+    <text x="848" y="137" text-anchor="middle" class="step">03 · TAG MANAGEMENT</text>
+    <text x="848" y="174" text-anchor="middle" class="main">Google Tag Manager</text>
+    <text x="848" y="201" text-anchor="middle" class="sub">Variables · Trigger · Tag</text>
+
+    <line x1="970" y1="165" x2="1015" y2="165" stroke="#333333" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="1030" y="90" width="245" height="150" fill="#f8f8f8" stroke="#333333" stroke-width="3"/>
+    <text x="1153" y="137" text-anchor="middle" class="step">04 · SEGMENT CALL</text>
+    <text x="1153" y="174" text-anchor="middle" class="main">Analytics.js</text>
+    <text x="1153" y="201" text-anchor="middle" class="sub">Page · Track · Identify</text>
+
+    <line x1="1275" y1="165" x2="1320" y2="165" stroke="#333333" stroke-width="4" marker-end="url(#arrow)"/>
+
+    <rect x="1335" y="90" width="200" height="150" fill="#f8f8f8" stroke="#333333" stroke-width="3"/>
+    <text x="1435" y="137" text-anchor="middle" class="step">05 · VALIDATION</text>
+    <text x="1435" y="174" text-anchor="middle" class="main">Source Debugger</text>
+    <text x="1435" y="201" text-anchor="middle" class="sub">Payload received</text>
+
+    <!-- Output terminal -->
+    <line x1="1535" y1="165" x2="1549" y2="165" stroke="#333333" stroke-width="4"/>
+    <circle cx="1560" cy="165" r="11" fill="#ffffff" stroke="#222222" stroke-width="4"/>
+    <text x="1560" y="210" text-anchor="middle" class="end">Validated</text>
+    <text x="1560" y="231" text-anchor="middle" class="sub">event</text>
+
+    <text x="800" y="294" text-anchor="middle" font-size="15" font-weight="650" fill="#505050">WooCommerce action → dataLayer event → GTM trigger and tag → Segment call → debugger verification</text>
+  </g>
+</svg>

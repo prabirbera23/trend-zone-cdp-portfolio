@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650" role="img" aria-labelledby="title desc">
+  <title id="title">Trend Zone target audience cards</title>
+  <desc id="desc">Seven planned audience cards for checkout abandoners, high-value customers, recent purchasers, winback customers, category-interested customers, repeat purchase opportunities and customers with unresolved service cases.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf7"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-25%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#17324d" flood-opacity=".10"/>
+    </filter>
+    <style>
+      .eyebrow{font:700 16px Arial,Helvetica,sans-serif;letter-spacing:2.5px;fill:#94634e}
+      .heading{font:800 30px Arial,Helvetica,sans-serif;fill:#102a43}
+      .intro{font:16px Arial,Helvetica,sans-serif;fill:#61758a}
+      .card-title{font:800 18px Arial,Helvetica,sans-serif;fill:#20354a}
+      .card-copy{font:14px Arial,Helvetica,sans-serif;fill:#65788a}
+      .number{font:800 15px Arial,Helvetica,sans-serif;fill:#fff}
+      .badge{font:800 11px Arial,Helvetica,sans-serif;fill:#68469e}
+    </style>
+  </defs>
+
+  <rect width="1600" height="650" rx="30" fill="url(#bg)"/>
+  <text x="60" y="55" class="eyebrow">TARGET AUDIENCE FRAMEWORK</text>
+  <text x="60" y="98" class="heading">Planned Customer Audiences</text>
+  <text x="60" y="128" class="intro">Audience eligibility will be calculated from governed identity, behavioural, transaction and service data.</text>
+
+  <!-- Card 1 -->
+  <g filter="url(#shadow)">
+    <rect x="60" y="175" width="350" height="175" rx="22" fill="#fff" stroke="#edb293"/>
+  </g>
+  <circle cx="98" cy="213" r="18" fill="#df6732"/>
+  <text x="98" y="219" text-anchor="middle" class="number">1</text>
+  <rect x="326" y="197" width="62" height="22" rx="11" fill="#f3eafb"/>
+  <text x="357" y="212" text-anchor="middle" class="badge">PLANNED</text>
+  <text x="88" y="259" class="card-title">Checkout Abandoners</text>
+  <text x="88" y="292" class="card-copy">Checkout Started without a later</text>
+  <text x="88" y="314" class="card-copy">Order Completed in the set window.</text>
+
+  <!-- Card 2 -->
+  <g filter="url(#shadow)">
+    <rect x="440" y="175" width="350" height="175" rx="22" fill="#fff" stroke="#a9c9ec"/>
+  </g>
+  <circle cx="478" cy="213" r="18" fill="#4778c7"/>
+  <text x="478" y="219" text-anchor="middle" class="number">2</text>
+  <rect x="706" y="197" width="62" height="22" rx="11" fill="#f3eafb"/>
+  <text x="737" y="212" text-anchor="middle" class="badge">PLANNED</text>
+  <text x="468" y="259" class="card-title">High-Value Customers</text>
+  <text x="468" y="292" class="card-copy">Customers exceeding a governed</text>
+  <text x="468" y="314" class="card-copy">spend or lifetime-value threshold.</text>
+
+  <!-- Card 3 -->
+  <g filter="url(#shadow)">
+    <rect x="820" y="175" width="350" height="175" rx="22" fill="#fff" stroke="#9cddb0"/>
+  </g>
+  <circle cx="858" cy="213" r="18" fill="#35aa5d"/>
+  <text x="858" y="219" text-anchor="middle" class="number">3</text>
+  <rect x="1086" y="197" width="62" height="22" rx="11" fill="#f3eafb"/>
+  <text x="1117" y="212" text-anchor="middle" class="badge">PLANNED</text>
+  <text x="848" y="259" class="card-title">Recent Purchasers</text>
+  <text x="848" y="292" class="card-copy">Customers with an Order Completed</text>
+  <text x="848" y="314" class="card-copy">inside the defined recent period.</text>
+
+  <!-- Card 4 -->
+  <g filter="url(#shadow)">
+    <rect x="1200" y="175" width="340" height="175" rx="22" fill="#fff" stroke="#c9b7ef"/>
+  </g>
+  <circle cx="1238" cy="213" r="18" fill="#7757b8"/>
+  <text x="1238" y="219" text-anchor="middle" class="number">4</text>
+  <rect x="1456" y="197" width="62" height="22" rx="11" fill="#f3eafb"/>
+  <text x="1487" y="212" text-anchor="middle" class="badge">PLANNED</text>
+  <text x="1228" y="259" class="card-title">Winback Customers</text>
+  <text x="1228" y="292" class="card-copy">Previous purchasers with no order</text>
+  <text x="1228" y="314" class="card-copy">during a defined inactivity period.</text>
+
+  <!-- Card 5 -->
+  <g filter="url(#shadow)">
+    <rect x="250" y="390" width="350" height="175" rx="22" fill="#fff" stroke="#a9c9ec"/>
+  </g>
+  <circle cx="288" cy="428" r="18" fill="#4778c7"/>
+  <text x="288" y="434" text-anchor="middle" class="number">5</text>
+  <rect x="516" y="412" width="62" height="22" rx="11" fill="#f3eafb"/>
+  <text x="547" y="427" text-anchor="middle" class="badge">PLANNED</text>
+  <text x="278" y="474" class="card-title">Category-Interested</text>
+  <text x="278" y="497" class="card-title">Customers</text>
+  <text x="278" y="526" class="card-copy">Repeated product or content engagement</text>
+  <text x="278" y="548" class="card-copy">within a governed product category.</text>
+
+  <!-- Card 6 -->
+  <g filter="url(#shadow)">
+    <rect x="625" y="390" width="350" height="175" rx="22" fill="#fff" stroke="#edb293"/>
+  </g>
+  <circle cx="663" cy="428" r="18" fill="#df6732"/>
+  <text x="663" y="434" text-anchor="middle" class="number">6</text>
+  <rect x="891" y="412" width="62" height="22" rx="11" fill="#f3eafb"/>
+  <text x="922" y="427" text-anchor="middle" class="badge">PLANNED</text>
+  <text x="653" y="474" class="card-title">Repeat Purchase</text>
+  <text x="653" y="497" class="card-title">Opportunities</text>
+  <text x="653" y="526" class="card-copy">Customers approaching an expected</text>
+  <text x="653" y="548" class="card-copy">replenishment or repurchase window.</text>
+
+  <!-- Card 7 -->
+  <g filter="url(#shadow)">
+    <rect x="1000" y="390" width="350" height="175" rx="22" fill="#fff" stroke="#dfb9a8"/>
+  </g>
+  <circle cx="1038" cy="428" r="18" fill="#b36c4c"/>
+  <text x="1038" y="434" text-anchor="middle" class="number">7</text>
+  <rect x="1266" y="412" width="62" height="22" rx="11" fill="#f3eafb"/>
+  <text x="1297" y="427" text-anchor="middle" class="badge">PLANNED</text>
+  <text x="1028" y="474" class="card-title">Customers with Unresolved</text>
+  <text x="1028" y="497" class="card-title">Service Cases</text>
+  <text x="1028" y="526" class="card-copy">Known customers linked to an open</text>
+  <text x="1028" y="548" class="card-copy">Salesforce customer-service Case.</text>
+
+  <line x1="60" y1="607" x2="1540" y2="607" stroke="#d6e0e8"/>
+  <text x="800" y="630" text-anchor="middle" class="card-copy">All audience definitions are target-state designs and require agreed thresholds, windows and governance rules.</text>
+</svg>

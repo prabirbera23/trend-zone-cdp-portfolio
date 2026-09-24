@@ -1,0 +1,187 @@
+{
+  "info": {
+    "_postman_id": "bcc57916-eeeb-40db-bec0-9e914d2510c0",
+    "name": "TrendCart Marketplace — Direct Segment Simulation",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "58178840",
+    "_collection_link": "https://go.postman.co/collection/58178840-bcc57916-eeeb-40db-bec0-9e914d2510c0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "01 — Known Customer Order",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Segment accepted the event\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Segment returned success\", function () {\r\n    const response = pm.response.json();\r\n    pm.expect(response.success).to.eql(true);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{segment_write_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userId\": \"TZ-CUST-006\",\r\n  \"event\": \"Marketplace Order Completed\",\r\n  \"properties\": {\r\n    \"source_system\": \"trendcart\",\r\n    \"marketplace\": \"trendcart\",\r\n    \"source_event_id\": \"TC-EVT-20001\",\r\n    \"order_id\": \"TC-ORDER-20001\",\r\n    \"customer_reference\": \"TC-CUST-006\",\r\n    \"currency\": \"INR\",\r\n    \"subtotal\": 1299,\r\n    \"discount\": 0,\r\n    \"shipping\": 50,\r\n    \"tax\": 0,\r\n    \"revenue\": 1349,\r\n    \"products\": [\r\n      {\r\n        \"product_id\": \"P310\",\r\n        \"sku\": \"TZ-SHOES-310\",\r\n        \"name\": \"Trend Zone Running Shoes\",\r\n        \"category\": \"Footwear\",\r\n        \"price\": 1299,\r\n        \"quantity\": 1\r\n      }\r\n    ]\r\n  },\r\n  \"context\": {\r\n    \"source\": \"marketplace_simulation\",\r\n    \"integration_method\": \"postman_direct_to_segment\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{segment_track_url}}",
+          "host": [
+            "{{segment_track_url}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "02 — Marketplace-Only Customer Order",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Segment accepted the event\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Segment returned success\", function () {\r\n    const response = pm.response.json();\r\n    pm.expect(response.success).to.eql(true);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{segment_write_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"anonymousId\": \"marketplace:trendcart:TC-CUST-101\",\r\n  \"event\": \"Marketplace Order Completed\",\r\n  \"properties\": {\r\n    \"source_system\": \"trendcart\",\r\n    \"marketplace\": \"trendcart\",\r\n    \"source_event_id\": \"TC-EVT-20002\",\r\n    \"order_id\": \"TC-ORDER-20002\",\r\n    \"customer_reference\": \"TC-CUST-101\",\r\n    \"currency\": \"INR\",\r\n    \"subtotal\": 1899,\r\n    \"discount\": 100,\r\n    \"shipping\": 0,\r\n    \"tax\": 0,\r\n    \"revenue\": 1799,\r\n    \"products\": [\r\n      {\r\n        \"product_id\": \"P420\",\r\n        \"sku\": \"TZ-JACKET-420\",\r\n        \"name\": \"Trend Zone Casual Jacket\",\r\n        \"category\": \"Outerwear\",\r\n        \"price\": 1899,\r\n        \"quantity\": 1\r\n      }\r\n    ]\r\n  },\r\n  \"context\": {\r\n    \"source\": \"marketplace_simulation\",\r\n    \"integration_method\": \"postman_direct_to_segment\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{segment_track_url}}",
+          "host": [
+            "{{segment_track_url}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "03 — Cancelled Marketplace Order",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Segment accepted the event\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Segment returned success\", function () {\r\n    const response = pm.response.json();\r\n    pm.expect(response.success).to.eql(true);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{segment_write_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userId\": \"TZ-CUST-006\",\r\n  \"event\": \"Marketplace Order Cancelled\",\r\n  \"properties\": {\r\n    \"source_system\": \"trendcart\",\r\n    \"marketplace\": \"trendcart\",\r\n    \"source_event_id\": \"TC-EVT-20003\",\r\n    \"order_id\": \"TC-ORDER-20003\",\r\n    \"customer_reference\": \"TC-CUST-006\",\r\n    \"currency\": \"INR\",\r\n    \"revenue\": 1349,\r\n    \"order_status\": \"cancelled\",\r\n    \"cancellation_reason\": \"customer_requested\",\r\n    \"products\": [\r\n      {\r\n        \"product_id\": \"P310\",\r\n        \"sku\": \"TZ-SHOES-310\",\r\n        \"name\": \"Trend Zone Running Shoes\",\r\n        \"category\": \"Footwear\",\r\n        \"price\": 1299,\r\n        \"quantity\": 1\r\n      }\r\n    ]\r\n  },\r\n  \"context\": {\r\n    \"source\": \"marketplace_simulation\",\r\n    \"integration_method\": \"postman_direct_to_segment\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{segment_track_url}}",
+          "host": [
+            "{{segment_track_url}}"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "04 — Returned Marketplace Order",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Segment accepted the event\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Segment returned success\", function () {\r\n    const response = pm.response.json();\r\n    pm.expect(response.success).to.eql(true);\r\n});"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{segment_write_key}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"userId\": \"TZ-CUST-006\",\r\n  \"event\": \"Marketplace Order Returned\",\r\n  \"properties\": {\r\n    \"source_system\": \"trendcart\",\r\n    \"marketplace\": \"trendcart\",\r\n    \"source_event_id\": \"TC-EVT-20004\",\r\n    \"order_id\": \"TC-ORDER-20001\",\r\n    \"return_id\": \"TC-RETURN-20001\",\r\n    \"customer_reference\": \"TC-CUST-006\",\r\n    \"currency\": \"INR\",\r\n    \"refund_amount\": 1299,\r\n    \"order_status\": \"returned\",\r\n    \"return_reason\": \"size_not_suitable\",\r\n    \"products\": [\r\n      {\r\n        \"product_id\": \"P310\",\r\n        \"sku\": \"TZ-SHOES-310\",\r\n        \"name\": \"Trend Zone Running Shoes\",\r\n        \"category\": \"Footwear\",\r\n        \"price\": 1299,\r\n        \"quantity\": 1\r\n      }\r\n    ]\r\n  },\r\n  \"context\": {\r\n    \"source\": \"marketplace_simulation\",\r\n    \"integration_method\": \"postman_direct_to_segment\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{segment_track_url}}",
+          "host": [
+            "{{segment_track_url}}"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

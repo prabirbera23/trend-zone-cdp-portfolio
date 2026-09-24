@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" role="img" aria-labelledby="title desc">
+  <title id="title">Trend Zone anonymous-to-known identity decision flow</title>
+  <desc id="desc">Decision flow showing anonymous website activity, sign-in identification, governed customer ID checks, cross-source matching and the target unified Customer 360 profile.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fffaf7"/>
+      <stop offset="1" stop-color="#f8fbff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#17324d" flood-opacity=".10"/>
+    </filter>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0L7 3.5L0 7Z" fill="#d96532"/>
+    </marker>
+    <style>
+      .title{font:800 30px Arial,Helvetica,sans-serif;fill:#102a43}
+      .eyebrow{font:700 16px Arial,Helvetica,sans-serif;letter-spacing:2.5px;fill:#94634e}
+      .sub{font:16px Arial,Helvetica,sans-serif;fill:#61758a}
+      .node-title{font:800 16px Arial,Helvetica,sans-serif;fill:#20354a}
+      .node-sub{font:13px Arial,Helvetica,sans-serif;fill:#65788a}
+      .decision{font:800 16px Arial,Helvetica,sans-serif;fill:#20354a}
+      .label{font:800 13px Arial,Helvetica,sans-serif;fill:#8b4a2d}
+      .line{fill:none;stroke:#d96532;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+    </style>
+  </defs>
+
+  <rect width="1600" height="720" rx="30" fill="url(#bg)"/>
+  <text x="60" y="55" class="eyebrow">IDENTITY RESOLUTION DESIGN</text>
+  <text x="60" y="98" class="title">Anonymous-to-Known Identity Decision Flow</text>
+  <text x="60" y="128" class="sub">A profile becomes cross-source addressable only when a governed Trend Zone customer ID is available.</text>
+
+  <!-- Start -->
+  <rect x="55" y="270" width="210" height="112" rx="22" fill="#f3f8ff" stroke="#a9c9ec" filter="url(#shadow)"/>
+  <circle cx="92" cy="307" r="18" fill="#4778c7"/>
+  <path d="M85 307h14M92 300v14" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <text x="122" y="301" class="node-title">Website</text>
+  <text x="122" y="321" class="node-title">activity</text>
+  <text x="82" y="345" class="node-sub">Segment assigns and retains</text>
+  <text x="82" y="367" class="node-sub">an anonymousId</text>
+
+  <!-- Decision 1 -->
+  <path d="M440 230L580 326L440 422L300 326Z" fill="#fff7f2" stroke="#e4a081" stroke-width="2" filter="url(#shadow)"/>
+  <text x="440" y="314" text-anchor="middle" class="decision">Has the customer</text>
+  <text x="440" y="338" text-anchor="middle" class="decision">signed in?</text>
+
+  <!-- Anonymous branch -->
+  <rect x="320" y="520" width="270" height="105" rx="22" fill="#f3f8ff" stroke="#a9c9ec" filter="url(#shadow)"/>
+  <text x="455" y="558" text-anchor="middle" class="node-title">Remain anonymous</text>
+  <text x="455" y="584" text-anchor="middle" class="node-sub">Continue collecting activity using</text>
+  <text x="455" y="605" text-anchor="middle" class="node-sub">the same anonymousId</text>
+
+  <!-- Identify -->
+  <rect x="630" y="270" width="245" height="112" rx="22" fill="#fff7f2" stroke="#e4a081" filter="url(#shadow)"/>
+  <circle cx="668" cy="307" r="18" fill="#d96532"/>
+  <path d="M658 307h20M668 297v20" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <text x="700" y="310" class="node-title">Send Identify</text>
+  <text x="657" y="345" class="node-sub">userId = governed</text>
+  <text x="657" y="367" class="node-sub">customer_id</text>
+
+  <!-- Known activity -->
+  <rect x="925" y="270" width="245" height="112" rx="22" fill="#f5f1ff" stroke="#c9b7ef" filter="url(#shadow)"/>
+  <circle cx="963" cy="307" r="18" fill="#7757b8"/>
+  <path d="M953 307l7 7 14-17" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="995" y="301" class="node-title">Known customer</text>
+  <text x="995" y="321" class="node-title">activity</text>
+  <text x="952" y="345" class="node-sub">Anonymous and future events</text>
+  <text x="952" y="367" class="node-sub">associate with customer_id</text>
+
+  <!-- Decision 2 -->
+  <path d="M1330 220L1470 326L1330 432L1190 326Z" fill="#f5f1ff" stroke="#a995d2" stroke-width="2" filter="url(#shadow)"/>
+  <text x="1330" y="302" text-anchor="middle" class="decision">Does another source</text>
+  <text x="1330" y="326" text-anchor="middle" class="decision">contain the same governed</text>
+  <text x="1330" y="350" text-anchor="middle" class="decision">customer_id?</text>
+
+  <!-- Unmatched branch -->
+  <rect x="950" y="520" width="290" height="105" rx="22" fill="#fbf5f3" stroke="#dfb9a8" filter="url(#shadow)"/>
+  <text x="1095" y="548" text-anchor="middle" class="node-title">Keep source identity</text>
+  <text x="1095" y="569" text-anchor="middle" class="node-title">separate</text>
+  <text x="1095" y="592" text-anchor="middle" class="node-sub">Retain a namespaced reference;</text>
+  <text x="1095" y="611" text-anchor="middle" class="node-sub">do not force a profile match</text>
+
+  <!-- Target outputs -->
+  <rect x="1300" y="520" width="245" height="105" rx="22" fill="#f2fbf5" stroke="#9cddb0" stroke-dasharray="7 5" filter="url(#shadow)"/>
+  <circle cx="1338" cy="556" r="18" fill="#35aa5d"/>
+  <path d="M1328 556l7 7 14-17" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1370" y="549" class="node-title">Resolve</text>
+  <text x="1370" y="570" class="node-title">identities</text>
+  <text x="1328" y="592" class="node-sub">Deterministic customer_id match</text>
+  <rect x="1328" y="600" width="58" height="20" rx="10" fill="#e2f6e8"/>
+  <text x="1357" y="614" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="11" font-weight="800" fill="#247c45">TARGET</text>
+
+  <rect x="1300" y="655" width="245" height="45" rx="20" fill="#35aa5d"/>
+  <text x="1422" y="684" text-anchor="middle" font-family="Arial,Helvetica,sans-serif" font-size="17" font-weight="800" fill="#fff">Unified Customer 360</text>
+
+  <!-- Main flow connectors -->
+  <path d="M265 326H300" class="line"/>
+  <path d="M580 326H630" class="line"/>
+  <path d="M875 326H925" class="line"/>
+  <path d="M1170 326H1190" class="line"/>
+
+  <!-- Decision 1 no / loop -->
+  <path d="M440 422V500Q440 510 450 510H455V520" class="line"/>
+  <text x="452" y="470" class="label">NO</text>
+  <path d="M320 573H180Q155 573 155 548V392Q155 382 165 382" class="line"/>
+  <text x="185" y="550" class="node-sub">Later sign-in returns to decision</text>
+  <text x="592" y="310" class="label">YES</text>
+
+  <!-- Decision 2 branches -->
+  <path d="M1330 432V490Q1330 505 1315 505H1095V520" class="line"/>
+  <text x="1265" y="492" class="label">NO</text>
+  <path d="M1470 326H1560V572Q1560 582 1550 582H1545" class="line"/>
+  <text x="1500" y="311" class="label">YES</text>
+  <path d="M1422 625V655" class="line"/>
+
+  <!-- Legend -->
+  <rect x="60" y="665" width="14" height="14" rx="3" fill="#fff" stroke="#9eb2c4"/>
+  <text x="84" y="677" class="node-sub">Implemented identity collection</text>
+  <rect x="315" y="665" width="14" height="14" rx="3" fill="#fff" stroke="#9cddb0" stroke-dasharray="4 3"/>
+  <text x="339" y="677" class="node-sub">Target identity capability</text>
+</svg>
